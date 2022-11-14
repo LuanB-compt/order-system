@@ -4,9 +4,11 @@
 
 ------------------------------------
 
+<br>
+
 ### **USAGE**
 *OBS*:
-- This tutorial works with Linux and Windows;<br><br>
+This tutorial works with Linux and Windows;<br><br>
 
 - How to compile with javac (java compiler):
 ```
@@ -18,6 +20,8 @@ $ javac -d target/ -sourcepath src/ src/system.java
 $ cd target/
 $ java system
 ```
+
+<br>
 
 ### **PROJECT STRUCTURE**
 - `src/`: folder with the source code.
@@ -34,6 +38,8 @@ target/
   order.class
 README.md
 ```
+
+<br>
 
 ### **DEVELOPERS**
 - Felipe Ricco Soares;
