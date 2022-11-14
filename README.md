@@ -34,3 +34,13 @@ target/
   order.class
 README.md
 ```
+
+### **DEVELOPERS**
+- Felipe Ricco Soares;
+  - *contact:*
+- Luan Bruno Domingues de Oliveira;
+  - *contact: luan.oliveira@facens.br*
+- Mateus Martins;
+  - *contact:*
+- Tamiris Tavares;
+  - *contact:*
