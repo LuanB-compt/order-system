@@ -4,7 +4,7 @@ import java.util.*;
 
 
 /*MAIN FUNCTION*/
-public class app{
+public class system{
   public static void main(String[] args){
     client[] clientes = new client[3];
     String[] nomes = {"Luan", "Helena", "Gaigue"};
