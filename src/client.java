@@ -2,26 +2,16 @@ public class client{
   /*DECLARING THE ATTRIBUTES*/
   private String name;
   private String email;
-  private boolean company;
-  private String doc;
-
-
 
   /*CONSTRUCTOR METHOD*/
-  public client(String name, String email, boolean company, String doc){
+  public client(String name, String email){
     this.name = name;
     this.email = email;
-    this.company = company;
-    this.doc = doc;
   }
   public client(){
     this.name = "";
     this.email = "";
-    this.company = false;
-    this.doc = "";
   }
-
-  
 
   /*GETTERS*/
   public String get_name(){
@@ -29,12 +19,6 @@ public class client{
   }
   public String get_email(){
     return this.email;
-  }
-  public boolean get_company(){
-    return this.company;
-  }
-  public String get_doc(){
-    return this.doc;
   }
   
   /*SETTERS*/
@@ -44,12 +28,30 @@ public class client{
   public void set_email(String email){
     this.email = email;
   }
-  public void set_company(boolean company){
-    this.company = company;
-  }
-  public void set_doc(String doc){
-    this.doc = doc;
-  }
+}
 
-  
+
+
+public class PrivatePerson extends client{
+  /*DECLARING THE ATTRIBUTES*/
+  private String cpf;
+
+  /*CONSTRUCTOR METHOD*/
+  public PrivatePerson(String name, String email, String cpf){
+    super(name, email);
+    this.cpf = cpf;
+  }
+}
+
+
+
+public class LegalOrganization extends client{
+  /*DECLARING THE ATTRIBUTES*/
+  private String cnpj;
+
+  /*CONSTRUCTOR METHOD*/
+  public LegalOrganization(String name, String email, String cnpj){
+    super(name, email);
+    this.cnpj = cnpj;
+  }
 }
