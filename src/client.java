@@ -41,6 +41,16 @@ public class PrivatePerson extends client{
     super(name, email);
     this.cpf = cpf;
   }
+
+  /*GETTERS*/
+  public String get_cpf(){
+    return this.cpf;
+  }
+
+  /*SETTERS*/
+  public void set_cpf(String cpf){
+    this.cpf = cpf;
+  }
 }
 
 
@@ -52,6 +62,16 @@ public class LegalOrganization extends client{
   /*CONSTRUCTOR METHOD*/
   public LegalOrganization(String name, String email, String cnpj){
     super(name, email);
+    this.cnpj = cnpj;
+  }
+
+  /*GETTERS*/
+  public String get_cnpj(){
+    return this.cnpj;
+  }
+
+  /*SETTERS*/
+  public void set_cnpj(String cnpj){
     this.cnpj = cnpj;
   }
 }
