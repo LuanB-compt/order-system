@@ -1,16 +1,12 @@
-public class client{
+public class Client{
   /*DECLARING THE ATTRIBUTES*/
   private String name;
   private String email;
 
   /*CONSTRUCTOR METHOD*/
-  public client(String name, String email){
+  public Client(String name, String email){
     this.name = name;
     this.email = email;
-  }
-  public client(){
-    this.name = "";
-    this.email = "";
   }
 
   /*GETTERS*/
@@ -32,7 +28,7 @@ public class client{
 
 
 
-public class PrivatePerson extends client{
+public class PrivatePerson extends Client{
   /*DECLARING THE ATTRIBUTES*/
   private String cpf;
 
@@ -44,7 +40,7 @@ public class PrivatePerson extends client{
 
   /*GETTERS*/
   public String get_cpf(){
-    return this.cpf;
+    return cpf;
   }
 
   /*SETTERS*/
@@ -55,7 +51,7 @@ public class PrivatePerson extends client{
 
 
 
-public class LegalOrganization extends client{
+public class LegalOrganization extends Client{
   /*DECLARING THE ATTRIBUTES*/
   private String cnpj;
 
@@ -67,7 +63,7 @@ public class LegalOrganization extends client{
 
   /*GETTERS*/
   public String get_cnpj(){
-    return this.cnpj;
+    return cnpj;
   }
 
   /*SETTERS*/
