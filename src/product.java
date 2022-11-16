@@ -12,4 +12,32 @@ public class Product{
     this.price = price;
     this.provider = provider;
   }
+
+  /*GETTERS*/
+  public String get_product_name(){
+    return product_name;
+  }
+  public String get_description(){
+    return description;
+  }
+  public float get_price(){
+    return price;
+  }
+  public Provider get_provider(){
+    return provider;
+  }
+  
+  /*SETTERS*/
+  public void set_product_name(String product_name){
+    this.product_name = product_name;
+  }
+  public void set_description(String description){
+    this.description = description;
+  }
+  public void set_price(float price){
+    this.price = price;
+  }
+  public void set_provider(Provider provider){
+    this.provider = provider;
+  }
 }
