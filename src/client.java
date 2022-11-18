@@ -1,4 +1,4 @@
-public class Client{
+public class client{
   /*DECLARING THE ATTRIBUTES*/
   private String name;
   private String email;
@@ -28,12 +28,12 @@ public class Client{
 
 
 
-public class PrivatePerson extends Client{
+public class Person extends client{
   /*DECLARING THE ATTRIBUTES*/
   private String cpf;
 
   /*CONSTRUCTOR METHOD*/
-  public PrivatePerson(String name, String email, String cpf){
+  public Person(String name, String email, String cpf){
     super(name, email);
     this.cpf = cpf;
   }
@@ -51,12 +51,12 @@ public class PrivatePerson extends Client{
 
 
 
-public class LegalOrganization extends Client{
+public class Company extends client{
   /*DECLARING THE ATTRIBUTES*/
   private String cnpj;
 
   /*CONSTRUCTOR METHOD*/
-  public LegalOrganization(String name, String email, String cnpj){
+  public Company(String name, String email, String cnpj){
     super(name, email);
     this.cnpj = cnpj;
   }
