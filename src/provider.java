@@ -1,10 +1,10 @@
-public class Provider{
+public class provider{
   /*DECLARING ATTRIBUTES*/
   private String cnpj
   private String name;
 
   /*CONSTRUCTOR METHOD*/
-  public Provider(String cnpj, String name){
+  public provider(String cnpj, String name){
     this.cnpj = cnpj;
     this.name = name;
   }
