@@ -49,4 +49,4 @@ README.md
 - Mateus Martins;
   - *contact:*
 - Tamiris Tavares;
-  - *contact:*
+  - *contact: tamiris.lemes18@gmail.com*
