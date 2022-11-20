@@ -24,4 +24,11 @@ public class provider{
   public void set_name(String name){
     this.name = name;
   }
+
+  /*OTHER METHODS*/
+  public void show_me(){
+    System.out.print("** PROVIDER INFO **");
+    System.out.print("\n - Name: " + name); 
+    System.out.print("\n - CNPJ: " + cnpj);
+  }
 }
