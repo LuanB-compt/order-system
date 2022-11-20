@@ -1,4 +1,4 @@
-public class client{
+public class Client{
   /*DECLARING THE ATTRIBUTES*/
   private String name;
   private String email;
@@ -23,51 +23,5 @@ public class client{
   }
   public void set_email(String email){
     this.email = email;
-  }
-}
-
-
-
-public class Person extends client{
-  /*DECLARING THE ATTRIBUTES*/
-  private String cpf;
-
-  /*CONSTRUCTOR METHOD*/
-  public Person(String name, String email, String cpf){
-    super(name, email);
-    this.cpf = cpf;
-  }
-
-  /*GETTERS*/
-  public String get_cpf(){
-    return cpf;
-  }
-
-  /*SETTERS*/
-  public void set_cpf(String cpf){
-    this.cpf = cpf;
-  }
-}
-
-
-
-public class Company extends client{
-  /*DECLARING THE ATTRIBUTES*/
-  private String cnpj;
-
-  /*CONSTRUCTOR METHOD*/
-  public Company(String name, String email, String cnpj){
-    super(name, email);
-    this.cnpj = cnpj;
-  }
-
-  /*GETTERS*/
-  public String get_cnpj(){
-    return cnpj;
-  }
-
-  /*SETTERS*/
-  public void set_cnpj(String cnpj){
-    this.cnpj = cnpj;
   }
 }
