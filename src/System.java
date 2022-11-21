@@ -1,6 +1,6 @@
 /*IMPORT LIBRARYS*/
 import java.util.Scanner;
-
+import static java.lang.*;
 
 
 /*MAIN FUNCTION*/
