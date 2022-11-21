@@ -2,7 +2,7 @@ public class Order{
   /*DECLARING ATTRIBUTES*/
   private Product item;
   private int item_amount;
-  private float total_price;
+  private double total_price;
   private int id;
   private String date;
 
@@ -22,7 +22,7 @@ public class Order{
   public int get_item_amount(){
     return item_amount;
   }
-  public float get_total_price(){
+  public double get_total_price(){
     return total_price;
   }
   public int get_id(){
@@ -50,7 +50,7 @@ public class Order{
   }
 
   /*OTHER METHODS*/
-  public float calculate_total_price(){
+  public double calculate_total_price(){
     return this.item.get_price() * this.item_amount;
   }
 }
