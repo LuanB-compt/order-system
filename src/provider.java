@@ -4,7 +4,7 @@ public class Provider{
   private String name;
 
   /*CONSTRUCTOR METHOD*/
-  public Provider(String cnpj, String name){
+  public provider(String cnpj, String name){
     this.cnpj = cnpj;
     this.name = name;
   }
@@ -23,5 +23,12 @@ public class Provider{
   }
   public void set_name(String name){
     this.name = name;
+  }
+
+  /*OTHER METHODS*/
+  public void show_me(){
+    System.out.print("** PROVIDER INFO **");
+    System.out.print("\n - Name: " + name); 
+    System.out.print("\n - CNPJ: " + cnpj);
   }
 }

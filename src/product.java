@@ -2,11 +2,11 @@ public class Product{
   /*DECLARING ATTRIBUTES*/
   private String product_name;
   private String description;
-  private float price;
-  private Provider provider;
+  private double price;
+  private provider provider;
 
   /*CONSTRUCTOR METHOD*/
-  public Product(String product_name, String description, float price, Provider provider){
+  public product(String product_name, String description, double price, Provider provider){
     this.product_name = product_name;
     this.description = description;
     this.price = price;
@@ -20,7 +20,7 @@ public class Product{
   public String get_description(){
     return description;
   }
-  public float get_price(){
+  public double get_price(){
     return price;
   }
   public Provider get_provider(){
@@ -34,10 +34,20 @@ public class Product{
   public void set_description(String description){
     this.description = description;
   }
-  public void set_price(float price){
+  public void set_price(double price){
     this.price = price;
   }
   public void set_provider(Provider provider){
     this.provider = provider;
+  }
+
+  /*OTHER METHODS*/
+  public void show_me(){
+    System.out.print("** PRODUCT INFO **"); 
+    System.out.print("\n - Product name: " + product_name);
+    System.out.print("\n - Description: " + description); 
+    System.out.print("\n - Price: " + price); 
+    System.out.print("\n - Provider: " + provider.get_name()); 
+    System.out.print("\n   - Provider CNPJ: " + provider.get_cnpj()); 
   }
 }
