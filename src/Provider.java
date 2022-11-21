@@ -4,7 +4,7 @@ public class Provider{
   private String name;
 
   /*CONSTRUCTOR METHOD*/
-  public provider(String cnpj, String name){
+  public Provider(String cnpj, String name){
     this.cnpj = cnpj;
     this.name = name;
   }

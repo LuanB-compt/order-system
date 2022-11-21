@@ -1,4 +1,4 @@
-public class Person extends client{
+public class Person extends Client{
   /*DECLARING THE ATTRIBUTES*/
   private String cpf;
   private int storageAmount;
