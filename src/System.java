@@ -5,57 +5,98 @@ import java.util.*;
 
 /*MAIN FUNCTION*/
 public class system{
-  public static void main(String[] args){
-    int chosenMenu;
-    int subMenu;
+  public static void main(String[] args) throws Exception {
+    Scanner enter = new Scanner(System.in);
+    Scanner enterStr = new Scanner(System.in);
+    int informationClient, op=0, n;
+    String name, email, number, description;
+    Double price;
+    char opInternal;
+    ArrayList <PrivatePerson> privatePerson = new ArrayList<PrivatePerson>();
+    ArrayList <LegalOrganization> legalOrganization = new ArrayList<LegalOrganization>();
+    ArrayList <Provider> provider = new ArrayList<Provider>();
+    ArrayList <Product> product = new ArrayList<Product>();
 
-    Scanner in = new Scanner(System.in);
+    //teste
+    provider.add(new Provider("15456461", "Empresa"));
 
-    do{
-
-
-    }while (chosenMenu != 7);
-
-
-  }
-
-  //Main menu method
-  public static int chosenMenu(){
-    Scanner in = new Scanner(System.in);
-    int option;
-
-    System.out.println("....::: Sistema de Pedidos :::....");
-    System.err.println("[1] - Cadastros de Clientes");
-    System.err.println("[2] - Cadastro de Fornecedores");
-    System.err.println("[3] - Cadastro de Produtos");
-    System.err.println("[4] - Efetuação de um pedido");
-    System.err.println("[5] - Baixa de pagamento de um pedido");
-    System.err.println("[6] - Relatórios");
-    System.err.println("[7] - Sair (termina o sistema)");
+    //Menu
 
     do{
-      System.out.println("Escolha umas das opções: ");
-      option = in.nextInt();
-    } while (option < 1 || option > 6);
+      System.out.println("-------Menu-------");
+      System.out.println("[1] - Cadastro de Clientes" );
+      System.out.println("[2] - Cadastro de Fornecedores" );
+      System.out.println("[3] - Cadastro de Produtos" );
+      System.out.println("[4] - Efetuação de um pedido" );
+      System.out.println("[5] - Baixa de pagamento de um pedido" );
+      System.out.println("[6] - Relatórios" );
+      System.out.println("[7] - Sair" );
+      op = enter.nextInt();
 
-    return option;
-  }
 
-  //Submenu of "Relatórios"
-  public static int subMenu(){
-    Scanner in = new Scanner(System.in);
-    int option;
+      switch (op){
+        case 1: //Client Registration
+                System.out.println("-----Cadastro de Clientes----");
+                System.out.print("Digite 1 para Pessoa Física ou 2 para Pessoa Jurídica: ");
+                n=enter.nextInt();
+            
+                
+                System.out.print("Nome: ");
+                name=enterStr.nextLine();
+                System.out.print("Email: ");
+                email=enterStr.nextLine();
 
-    System.out.println("Sub-menu da opção - [6] - Relatórios");
-    System.out.println("[6.1] - Listagem de todos os Clientes");
-    System.out.println("[6.2] - Listagem de todos os Fornecedores");
-    System.out.println("[6.3] - Listagem de todos os Produtos");
-    System.out.println("[6.4] - Listagem de todos os Pedidos");
-    System.out.println("[6.5] - Listagem de todos os pedidos feitos em um determinado intervalo de datas");
-    System.out.println("[6.6] - Busca de um pedido pelo número");
-    System.out.println("[6.7] - Listagem de todos os pedidos pagos");
-    System.out.println("[6.8] - Busca de um produto pelo nome deste");
-    System.out.println("[6.9] - Cálculo do total dos pedidos em aberto (não pagos)");
+                if(n==1){
+                    System.out.print("CPF: ");
+                    number=enterStr.nextLine();
+                    System.out.print("Quantidade máxima de parcelamento do pedido: ");
+                    informationClient=enter.nextInt();
+                    privatePerson.add(new PrivatePerson(name, email, number, informationClient));
+                }
+                else if(n==2){
+                    System.out.print("CNPJ: ");
+                    number=enterStr.nextLine();
+                    System.out.print("Prazo máximo para faturamento do pedido: ");
+                    informationClient=enter.nextInt();
+                    legalOrganization.add(new LegalOrganization(name, email, number, informationClient));
+                }
+                break;
 
+        case 2:  //Provider Registration
+                System.out.println("-----Cadastro de Fornecedores----");
+                System.out.print("Nome: ");
+                name=enterStr.nextLine();
+                System.out.print("CNPJ: ");
+                number=enterStr.nextLine();
+                provider.add(new Provider(number, name));
+                break;
+
+        case 3:  //Products Registration
+                System.out.println("-----Cadastro de Produtos----");
+                System.out.print("Nome: ");
+                name=enterStr.nextLine();
+                System.out.print("Descrição: ");
+                description=enterStr.nextLine();
+                System.out.print("Preço: ");
+                price=enter.nextDouble();
+                System.out.print("Deseja ver os fornecedores cadastrados (S/N): ");
+                opInternal = enterStr.nextLine().charAt(0);
+                if(opInternal!='N'){
+                    for(int i=0; i<provider.size(); i++){
+                        System.out.print(i + " - ");
+                        provider.get(i).print();
+                    }
+                }
+                System.out.print("Número do fornecedor do produto " + name + ": " );
+                n=enter.nextInt(); 
+                product.add(new Product(name, description, price, provider.get(n)));
+                break;
+                
+    }
+
+    }while(op!=7);
+
+    enterStr.close();
+    enter.close();
   }
 }
