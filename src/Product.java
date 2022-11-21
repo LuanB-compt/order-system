@@ -44,10 +44,10 @@ public class Product{
   /*OTHER METHODS*/
   public void show_me(){
     System.out.print("** PRODUCT INFO **"); 
-    System.out.print("\n - Product name: " + product_name);
-    System.out.print("\n - Description: " + description); 
-    System.out.print("\n - Price: " + price); 
-    System.out.print("\n - Provider: " + provider.get_name()); 
-    System.out.print("\n   - Provider CNPJ: " + provider.get_cnpj()); 
+    System.out.print("\n - Product name: " + this.product_name);
+    System.out.print("\n - Description: " + this.description); 
+    System.out.print("\n - Price: " + this.price); 
+    System.out.print("\n - Provider: " + this.provider.get_name()); 
+    System.out.print("\n   - Provider CNPJ: " + this.provider.get_cnpj()); 
   }
 }

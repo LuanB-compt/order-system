@@ -28,7 +28,7 @@ public class Provider{
   /*OTHER METHODS*/
   public void show_me(){
     System.out.print("** PROVIDER INFO **");
-    System.out.print("\n - Name: " + name); 
-    System.out.print("\n - CNPJ: " + cnpj);
+    System.out.print("\n - Name: " + this.name); 
+    System.out.print("\n - CNPJ: " + this.cnpj);
   }
 }
