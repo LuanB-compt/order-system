@@ -1,6 +1,6 @@
 public class Provider{
   /*DECLARING ATTRIBUTES*/
-  private String cnpj
+  private String cnpj;
   private String name;
 
   /*CONSTRUCTOR METHOD*/

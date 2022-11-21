@@ -4,7 +4,7 @@ import java.util.*;
   
 
 /*MAIN FUNCTION*/
-public class system{
+public class System{
   public static void main(String[] args) throws Exception {
     Scanner enter = new Scanner(System.in);
     Scanner enterStr = new Scanner(System.in);
@@ -12,8 +12,8 @@ public class system{
     String name, email, number, description;
     Double price;
     char opInternal;
-    ArrayList <PrivatePerson> privatePerson = new ArrayList<PrivatePerson>();
-    ArrayList <LegalOrganization> legalOrganization = new ArrayList<LegalOrganization>();
+    ArrayList <Person> privatePerson = new ArrayList<Person>();
+    ArrayList <Company> legalOrganization = new ArrayList<Company>();
     ArrayList <Provider> provider = new ArrayList<Provider>();
     ArrayList <Product> product = new ArrayList<Product>();
 
@@ -51,14 +51,14 @@ public class system{
                     number=enterStr.nextLine();
                     System.out.print("Quantidade máxima de parcelamento do pedido: ");
                     informationClient=enter.nextInt();
-                    privatePerson.add(new PrivatePerson(name, email, number, informationClient));
+                    privatePerson.add(new Person(name, email, number, informationClient));
                 }
                 else if(n==2){
                     System.out.print("CNPJ: ");
                     number=enterStr.nextLine();
                     System.out.print("Prazo máximo para faturamento do pedido: ");
                     informationClient=enter.nextInt();
-                    legalOrganization.add(new LegalOrganization(name, email, number, informationClient));
+                    legalOrganization.add(new Company(name, email, number, informationClient));
                 }
                 break;
 
