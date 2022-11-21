@@ -1,4 +1,4 @@
-public class provider{
+public class Provider{
   /*DECLARING ATTRIBUTES*/
   private String cnpj
   private String name;

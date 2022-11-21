@@ -1,4 +1,4 @@
-public class product{
+public class Product{
   /*DECLARING ATTRIBUTES*/
   private String product_name;
   private String description;
