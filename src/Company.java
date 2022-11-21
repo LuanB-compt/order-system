@@ -1,4 +1,4 @@
-public class Company extends client{
+public class Company extends Client{
   /*DECLARING THE ATTRIBUTES*/
   private String cnpj;
   private int deadline;

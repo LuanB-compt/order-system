@@ -3,10 +3,10 @@ public class Product{
   private String product_name;
   private String description;
   private double price;
-  private provider provider;
+  private Provider provider;
 
   /*CONSTRUCTOR METHOD*/
-  public product(String product_name, String description, double price, Provider provider){
+  public Product(String product_name, String description, double price, Provider provider){
     this.product_name = product_name;
     this.description = description;
     this.price = price;

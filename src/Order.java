@@ -1,4 +1,4 @@
-public class order{
+public class Order{
   /*DECLARING ATTRIBUTES*/
   private Product item;
   private int item_amount;
@@ -7,7 +7,7 @@ public class order{
   private String date;
 
   /*CONSTRUCTOR METHOD*/
-  public order(Product item, int item_amount, int id, String date){
+  public Order(Product item, int item_amount, int id, String date){
     this.item = item;
     this.item_amount = item_amount;
     this.id = id;
